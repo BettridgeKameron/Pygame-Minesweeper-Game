@@ -1,5 +1,6 @@
-import random
 from numpy import pad
+import secrets
+
 class MineSweeperLogic:
 	height = 5
 	width = 5
@@ -12,7 +13,7 @@ class MineSweeperLogic:
 	#pre-condition: mines<height*length, grid is empty
 	def generateMines(self,grid,mines):
 		coordList = [(x, y) for x in range(1,self.height+1) for y in range(1,self.width+1)]
-		random.shuffle(coordList)
+		secrets.SystemRandom().shuffle(coordList)
 		for coord in coordList[:mines]:
 			grid[coord[0]][coord[1]] = 10
 		
