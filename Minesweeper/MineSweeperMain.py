@@ -12,12 +12,10 @@ Press \"r\" to restart, and \"ESC\" to exit.
 Good Luck!
 ''')
 print("Grid Width? (5 to 40 is recommended.)")
-blocksX = abs(int(input()))
-if blocksX == 0:
+if (blocksX := abs(int(input()))) == 0:
     raise Exception("Please enter a valid number!")
 print("Grid Height? (5 to 20 is recommended.)")
-blocksY = abs(int(input()))
-if blocksY == 0:
+if (blocksY := abs(int(input()))) == 0:
     raise Exception("Please enter a valid number!")
 blockspX = 45
 blockspY = 45
